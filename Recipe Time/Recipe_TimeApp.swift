@@ -11,7 +11,7 @@ import SwiftUI
 struct Recipe_TimeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RecipeInputView()
         }
     }
 }

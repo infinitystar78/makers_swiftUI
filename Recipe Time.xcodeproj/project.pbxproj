@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		CE42B0AE2913CA0700362406 /* Recipe_TimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B0AD2913CA0700362406 /* Recipe_TimeApp.swift */; };
-		CE42B0B02913CA0700362406 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B0AF2913CA0700362406 /* ContentView.swift */; };
 		CE42B0B22913CA0A00362406 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE42B0B12913CA0A00362406 /* Assets.xcassets */; };
 		CE42B0B52913CA0A00362406 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE42B0B42913CA0A00362406 /* Preview Assets.xcassets */; };
 		CE42B0BF2913CA0A00362406 /* Recipe_TimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B0BE2913CA0A00362406 /* Recipe_TimeTests.swift */; };
 		CE42B0C92913CA0A00362406 /* Recipe_TimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B0C82913CA0A00362406 /* Recipe_TimeUITests.swift */; };
 		CE42B0CB2913CA0A00362406 /* Recipe_TimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B0CA2913CA0A00362406 /* Recipe_TimeUITestsLaunchTests.swift */; };
+		CE42B0D82913CE0000362406 /* RecipeInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B0D72913CE0000362406 /* RecipeInputView.swift */; };
+		CE42B0DD2913DBD100362406 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B0DC2913DBD100362406 /* RecipeModel.swift */; };
+		CE42B0DF2913DC2100362406 /* RecipeInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B0DE2913DC2100362406 /* RecipeInputViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		CE42B0AA2913CA0700362406 /* Recipe Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recipe Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE42B0AD2913CA0700362406 /* Recipe_TimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe_TimeApp.swift; sourceTree = "<group>"; };
-		CE42B0AF2913CA0700362406 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE42B0B12913CA0A00362406 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE42B0B42913CA0A00362406 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE42B0BA2913CA0A00362406 /* Recipe TimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Recipe TimeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +45,9 @@
 		CE42B0C42913CA0A00362406 /* Recipe TimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Recipe TimeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE42B0C82913CA0A00362406 /* Recipe_TimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe_TimeUITests.swift; sourceTree = "<group>"; };
 		CE42B0CA2913CA0A00362406 /* Recipe_TimeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe_TimeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE42B0D72913CE0000362406 /* RecipeInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInputView.swift; sourceTree = "<group>"; };
+		CE42B0DC2913DBD100362406 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		CE42B0DE2913DC2100362406 /* RecipeInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInputViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +99,9 @@
 			isa = PBXGroup;
 			children = (
 				CE42B0AD2913CA0700362406 /* Recipe_TimeApp.swift */,
-				CE42B0AF2913CA0700362406 /* ContentView.swift */,
+				CE42B0DB2913DB6800362406 /* Models */,
+				CE42B0DA2913DB5800362406 /* View Models */,
+				CE42B0D92913DB4100362406 /* Views */,
 				CE42B0B12913CA0A00362406 /* Assets.xcassets */,
 				CE42B0B32913CA0A00362406 /* Preview Content */,
 			);
@@ -125,6 +131,30 @@
 				CE42B0CA2913CA0A00362406 /* Recipe_TimeUITestsLaunchTests.swift */,
 			);
 			path = "Recipe TimeUITests";
+			sourceTree = "<group>";
+		};
+		CE42B0D92913DB4100362406 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE42B0D72913CE0000362406 /* RecipeInputView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE42B0DA2913DB5800362406 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE42B0DE2913DC2100362406 /* RecipeInputViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		CE42B0DB2913DB6800362406 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE42B0DC2913DBD100362406 /* RecipeModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +287,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE42B0B02913CA0700362406 /* ContentView.swift in Sources */,
+				CE42B0DF2913DC2100362406 /* RecipeInputViewModel.swift in Sources */,
 				CE42B0AE2913CA0700362406 /* Recipe_TimeApp.swift in Sources */,
+				CE42B0D82913CE0000362406 /* RecipeInputView.swift in Sources */,
+				CE42B0DD2913DBD100362406 /* RecipeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

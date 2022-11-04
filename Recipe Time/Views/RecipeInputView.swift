@@ -16,7 +16,9 @@ struct RecipeInputView: View {
     @State private var portionSize = 0
     @State private var selectedDate = Date()
     @State private var selectedCuisine = ""
+    @State private var recipeName = "Name"
     @StateObject var model = RecipeInputViewModel()
+    @State private var presentAlert = false
 
     var body: some View {
         ScrollView {
@@ -27,10 +29,28 @@ struct RecipeInputView: View {
                         .scaledToFit()
                     HStack {
                         
-                        Text("Burger")
+                        Text(recipeName)
                             .foregroundColor(.yellow)
                             .bold()
                             .font(.system(size: 72))
+                        Button {
+                            presentAlert = true
+                        } label: {
+                            Image(systemName: "pencil")
+                                .foregroundColor(.orange)
+                        }        .alert("Login", isPresented: $presentAlert, actions: {
+                            TextField("Recipe Name", text: $recipeName)
+
+                        
+
+                            
+                            Button("Save", action: {})
+                           
+                        }, message: {
+                            Text("Please enter recipe name.")
+                        })
+
+                        
                         
                         Spacer()
                     }

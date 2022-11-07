@@ -12,6 +12,8 @@ struct Recipe_TimeApp: App {
     var body: some Scene {
         WindowGroup {
             RecipeInputView()
+           // HomeView()
+            //SettingsView()
         }
     }
 }

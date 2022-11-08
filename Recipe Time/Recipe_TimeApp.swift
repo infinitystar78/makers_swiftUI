@@ -11,8 +11,14 @@ import SwiftUI
 struct Recipe_TimeApp: App {
     var body: some Scene {
         WindowGroup {
-            RecipeInputView()
-           // HomeView()
+        RecipeInputView()
+          //  HomeView().onAppear{
+                
+                
+           // }
+            
+            
+            
             //SettingsView()
         }
     }

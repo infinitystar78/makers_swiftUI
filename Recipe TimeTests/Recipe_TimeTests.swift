@@ -9,28 +9,59 @@ import XCTest
 @testable import Recipe_Time
 
 final class Recipe_TimeTests: XCTestCase {
+    
+    var sut: RecipeInputModelProtocol?
+    
+    
+  
 
     override func setUpWithError() throws {
+        try super.setUpWithError()
+        sut = RecipeInputViewModel(provider: <#NetworkServiceProvider<RecipeService>#>)
+        
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sut = nil
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+  
+    func test_IngredientsTitle() throws {
+        XCTAssertEqual(sut?.ingredientsTitle, "Ingredients")
+                                              
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func test_TimeToCookTitle() throws {
+        XCTAssertEqual(sut?.timeToCookTitle, "Time to cook")
+    }
+    
+    func test_ratingTitle() throws {
+        XCTAssertEqual(sut?.ratingTitle, "Rating")
+    }
+    
+    func test_portionSizeCalculation() {
+        let testPortions: [Int]  = [3,4,6,9,11]
+        testPortions.forEach { portion in
+            
         }
+        
+        let newPortionSize :Int = (sut?.doublePortionSize(portionSize: 2))!
+        XCTAssertEqual(newPortionSize, 4)
+       
     }
+    //most common assertion
+    func test_saveError() {
+        let save = sut?.saveRecipe()
+        XCTAssertEqual(save, false, "must equal false")
+        
+    }
+    
+    func test_success() {
+        let save = sut?.saveRecipe()
+        XCTAssertEqual(save, true, "result must eqaul true")
+    }
+    
 
 }

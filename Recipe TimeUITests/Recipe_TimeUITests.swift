@@ -26,6 +26,16 @@ final class Recipe_TimeUITests: XCTestCase {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
+        
+        let scrollViewsQuery = app.scrollViews
+        let ingredientsElementsQuery = scrollViewsQuery.otherElements.containing(.staticText, identifier:"Ingredients")
+        let stepper = ingredientsElementsQuery.children(matching: .stepper).matching(identifier: "5").element(boundBy: 0).buttons["Increment"]
+        ingredientsElementsQuery.children(matching: .stepper).matching(identifier: "5").element(boundBy: 0).buttons["Increment"].tap()
+        
+    
+        app.buttons["Add"].tap()
+        app.navigationBars["_TtGC7SwiftUI32NavigationStackHosting"].buttons["Back"].tap()
+    
 
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }

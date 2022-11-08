@@ -20,9 +20,11 @@ class RecipeTimeUserDefaults {
     var pushNotifications = Bool()
     var numberOfTimesRun = Int()
 
-    let defaults = UserDefaults.standard
+    private let defaults: UserDefaults
 
-    init() {}
+    init(defaults: UserDefaults) {
+        self.defaults = defaults
+    }
 
     func saveName(_ firstName: String, _ lastName: String) {
         defaults.set(firstName, forKey: RecipeUserDefaultsKeys.firstName.rawValue)

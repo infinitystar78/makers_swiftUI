@@ -16,6 +16,9 @@
 		CE23C6D52915322900991273 /* RecipeTimeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23C6D42915322900991273 /* RecipeTimeUserDefaults.swift */; };
 		CE23C6D829153AAC00991273 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23C6D729153AAC00991273 /* NetworkService.swift */; };
 		CE23C6DA29153AF800991273 /* PhotosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23C6D929153AF800991273 /* PhotosService.swift */; };
+		CE424D47291A3AED00C60082 /* Settings_TimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE424D46291A3AED00C60082 /* Settings_TimeTests.swift */; };
+		CE424D4A291A6CC700C60082 /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE424D49291A6CC700C60082 /* RecipeService.swift */; };
+		CE424D4C291A766100C60082 /* Network_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE424D4B291A766100C60082 /* Network_Tests.swift */; };
 		CE42B0AE2913CA0700362406 /* Recipe_TimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B0AD2913CA0700362406 /* Recipe_TimeApp.swift */; };
 		CE42B0B22913CA0A00362406 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE42B0B12913CA0A00362406 /* Assets.xcassets */; };
 		CE42B0B52913CA0A00362406 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE42B0B42913CA0A00362406 /* Preview Assets.xcassets */; };
@@ -26,6 +29,7 @@
 		CE42B0DD2913DBD100362406 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B0DC2913DBD100362406 /* RecipeModel.swift */; };
 		CE42B0DF2913DC2100362406 /* RecipeInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B0DE2913DC2100362406 /* RecipeInputViewModel.swift */; };
 		CE710FF6291909A20056C436 /* TextTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE710FF5291909A20056C436 /* TextTitleModifier.swift */; };
+		CE710FF829190D6E0056C436 /* LoginFlow_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE710FF729190D6E0056C436 /* LoginFlow_Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,9 @@
 		CE23C6D42915322900991273 /* RecipeTimeUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTimeUserDefaults.swift; sourceTree = "<group>"; };
 		CE23C6D729153AAC00991273 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		CE23C6D929153AF800991273 /* PhotosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosService.swift; sourceTree = "<group>"; };
+		CE424D46291A3AED00C60082 /* Settings_TimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings_TimeTests.swift; sourceTree = "<group>"; };
+		CE424D49291A6CC700C60082 /* RecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeService.swift; sourceTree = "<group>"; };
+		CE424D4B291A766100C60082 /* Network_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network_Tests.swift; sourceTree = "<group>"; };
 		CE42B0AA2913CA0700362406 /* Recipe Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recipe Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE42B0AD2913CA0700362406 /* Recipe_TimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe_TimeApp.swift; sourceTree = "<group>"; };
 		CE42B0B12913CA0A00362406 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +75,7 @@
 		CE42B0DC2913DBD100362406 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		CE42B0DE2913DC2100362406 /* RecipeInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInputViewModel.swift; sourceTree = "<group>"; };
 		CE710FF5291909A20056C436 /* TextTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTitleModifier.swift; sourceTree = "<group>"; };
+		CE710FF729190D6E0056C436 /* LoginFlow_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlow_Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,10 +131,19 @@
 		CE23C6D629153A8D00991273 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				CE23C6D729153AAC00991273 /* NetworkService.swift */,
+				CE424D48291A64F600C60082 /* Networkings */,
 				CE23C6D929153AF800991273 /* PhotosService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		CE424D48291A64F600C60082 /* Networkings */ = {
+			isa = PBXGroup;
+			children = (
+				CE23C6D729153AAC00991273 /* NetworkService.swift */,
+				CE424D49291A6CC700C60082 /* RecipeService.swift */,
+			);
+			path = Networkings;
 			sourceTree = "<group>";
 		};
 		CE42B0A12913CA0700362406 = {
@@ -152,10 +169,10 @@
 		CE42B0AC2913CA0700362406 /* Recipe Time */ = {
 			isa = PBXGroup;
 			children = (
+				CE42B0AD2913CA0700362406 /* Recipe_TimeApp.swift */,
 				CE23C6D629153A8D00991273 /* Services */,
 				CE23C6D3291531F100991273 /* Persistence */,
 				CE23C6CE29152D4800991273 /* View Modifiers */,
-				CE42B0AD2913CA0700362406 /* Recipe_TimeApp.swift */,
 				CE42B0D92913DB4100362406 /* Views */,
 				CE42B0DB2913DB6800362406 /* Models */,
 				CE42B0DA2913DB5800362406 /* View Models */,
@@ -177,6 +194,9 @@
 			isa = PBXGroup;
 			children = (
 				CE42B0BE2913CA0A00362406 /* Recipe_TimeTests.swift */,
+				CE710FF729190D6E0056C436 /* LoginFlow_Tests.swift */,
+				CE424D46291A3AED00C60082 /* Settings_TimeTests.swift */,
+				CE424D4B291A766100C60082 /* Network_Tests.swift */,
 			);
 			path = "Recipe TimeTests";
 			sourceTree = "<group>";
@@ -356,6 +376,7 @@
 				CE710FF6291909A20056C436 /* TextTitleModifier.swift in Sources */,
 				CE23C6BD29151AC100991273 /* RecipeTextEditorView.swift in Sources */,
 				CE23C6C7291521A100991273 /* HomeView.swift in Sources */,
+				CE424D4A291A6CC700C60082 /* RecipeService.swift in Sources */,
 				CE23C6D22915306B00991273 /* SettingsViewModel.swift in Sources */,
 				CE42B0D82913CE0000362406 /* RecipeInputView.swift in Sources */,
 				CE23C6CD2915225300991273 /* RecipeListView.swift in Sources */,
@@ -371,6 +392,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE42B0BF2913CA0A00362406 /* Recipe_TimeTests.swift in Sources */,
+				CE424D47291A3AED00C60082 /* Settings_TimeTests.swift in Sources */,
+				CE424D4C291A766100C60082 /* Network_Tests.swift in Sources */,
+				CE710FF829190D6E0056C436 /* LoginFlow_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

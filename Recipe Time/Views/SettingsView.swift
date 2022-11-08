@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    @StateObject var model = SettingsViewModel()
+    @StateObject var model = SettingsViewModel(recipeUserDefaults: RecipeTimeUserDefaults(defaults: UserDefaults.standard))
     
     var body: some View {
         Text("Settings")

@@ -9,13 +9,14 @@ import Foundation
 
 class SettingsViewModel: ObservableObject {
     
-    private var userDefaults = RecipeTimeUserDefaults()
+    private var userDefaults: RecipeTimeUserDefaults
     @Published var firstName = String()
     @Published var lastName = String()
     @Published var pushNotifications = Bool()
     @Published var numberOfTimesRun = Int()
     
-    init(){
+    init(recipeUserDefaults:RecipeTimeUserDefaults){
+        userDefaults = recipeUserDefaults
         userDefaults.load()
         
     }

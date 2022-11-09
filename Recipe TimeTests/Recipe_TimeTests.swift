@@ -8,16 +8,19 @@
 import XCTest
 @testable import Recipe_Time
 
+
+
 final class Recipe_TimeTests: XCTestCase {
     
     var sut: RecipeInputModelProtocol?
+    
     
     
   
 
     override func setUpWithError() throws {
         try super.setUpWithError()
-        sut = RecipeInputViewModel(provider: <#NetworkServiceProvider<RecipeService>#>)
+        sut = RecipeInputViewModel()
         
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }

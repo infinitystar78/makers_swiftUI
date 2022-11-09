@@ -19,6 +19,8 @@ struct RecipeInputView: View {
     @State private var recipeName = "Name"
     @StateObject var model = RecipeInputViewModel()
     @State private var presentAlert = false
+    
+
 
     var body: some View {
         VStack {
@@ -130,6 +132,6 @@ struct RecipeInputView: View {
 
 struct RecipeInputView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeInputView().preferredColorScheme(.light)
+        RecipeInputView()
     }
 }

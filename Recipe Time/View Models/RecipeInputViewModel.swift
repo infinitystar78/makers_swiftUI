@@ -39,7 +39,7 @@ class RecipeInputViewModel: ObservableObject, RecipeInputModelProtocol {
     var timeToCookTextFieldPrompt = "Time to cook"
     let provider: NetworkServiceProvider<RecipeService>
   
-    init(provider: NetworkServiceProvider<RecipeService>){
+    init(provider: NetworkServiceProvider<RecipeService> = NetworkServiceProvider<RecipeService>()){
         self.provider = provider
     }
     

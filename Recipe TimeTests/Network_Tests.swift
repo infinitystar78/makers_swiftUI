@@ -66,7 +66,7 @@ final class TestViewModel {
 final class Network_Tests: XCTestCase {
     
     
-    var sut: TestRecipeService?
+    var sut: TestViewModel?
     
     
     
